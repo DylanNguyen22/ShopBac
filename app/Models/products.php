@@ -275,36 +275,4 @@ class products extends Model
         $material = DB::select("SELECT * FROM chatlieu WHERE MaCL = $product->MaCL")[0]->TenCL;
         return [$imgs, $product, $x, $material, $result];
     }
-    // =================
-    public function getChatLieu()
-    {
-        $data = DB::select("SELECT * FROM chatlieu ");
-        return $data;
-        // dd($datatest);
-    }
-
-    public function getProductByCategory1()
-    {
-        $data = DB::select("SELECT * FROM SanPham, LoaiSanPham, DanhMuc, HinhAnh WHERE SanPham.MaLoai = LoaiSanPham.MaLoai AND LoaiSanPham.MaDanhMuc = DanhMuc.MaDanhMuc AND SanPham.MaSP = HinhAnh.MaSP AND HinhAnh.LoaiAnh = 1 AND sanpham.TrangThai = 0  ");
-        // dd($data);
-        return $data;
-    }
-
-    public function getImages($data)
-    {
-        $data = DB::select("SELECT * FROM HinhAnh WHERE MaSP = $data");
-        return $data;
-    }
-
-    public function getProduct($data)
-    {
-        $productInfo = DB::select("SELECT * FROM sanpham, DanhMuc, LoaiSanPham WHERE SanPham.MaLoai = LoaiSanPham.MaLoai AND LoaiSanPham.MaDanhMuc = DanhMuc.MaDanhMuc AND sanpham.TrangThai = 0 AND MaSP = $data");
-        return $productInfo;
-    }
-
-    public function getRelatedProductType($data)
-    {
-        $data = DB::select("SELECT * FROM sanpham WHERE TrangThai = 0 AND MaLoai = $data");
-        return $data;
-    }
 }
