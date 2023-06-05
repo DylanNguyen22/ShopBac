@@ -1,0 +1,92 @@
+INSERT INTO `danhmuc` (`MaDanhMuc`, `TenDanhMuc`, `TrangThai`) VALUES (NULL, 'trang sức nữ', 0), (NULL, 'trang sức đôi', 0), (NULL, 'Trang sức nam', 0), (NULL, 'Trang sức cho bé', 0), (NULL, 'quà tặng', 0), (NULL, 'tin tức', 0);
+
+INSERT INTO `LoaiSanPham` (`MaLoai`, `TenLoai`, `TrangThai`, `MaDanhMuc`) VALUES (NULL, 'Nhẫn bạc nữ','0', '1'), (NULL, 'Dây chuyền bạc nữ','0', '1'), (NULL, 'Lắc tay bạc nữ','0', '1'), (NULL, 'Bông tai bạc nữ','0', '1'), (NULL, 'Bộ trang sức','0', '1'), (NULL, 'Dây chuyền mặt chữ','0', '1'), (NULL, 'Dây chuyền cung hoàng đạo','0', '1'), (NULL, 'Nhẫn đôi bạc nhẫn cặp bạc','0', '2'), (NULL, 'dây chuyền cặp đôi bạc','0', '2'), (NULL, 'vòng tay đôi bạc vòng tay cặp bạc','0', '2'), (NULL, 'Nhẫn bạc nam','0', '3'), (NULL, 'Dây chuyền bạc nam','0', '3'), (NULL, 'Lắc tay bạc nam','0', '3'), (NULL, 'Khuyên tai bạc nam','0', '3'), (NULL, 'Lắc bạc cho bé','0', '4'), (NULL, 'Dây chuyền bạc cho bé trai','0', '4'), (NULL, 'Dây chuyền bạc cho bé gái','0', '4'), (NULL, 'Bông tai bạc cho bé','0', '4'), (NULL, 'Nhẫn bạc cho bé trai','0', '4'), (NULL, 'Quà tặng cho nam','0', '5'), (NULL, 'Quà tặng cho nữ','0', '5'), (NULL, 'Quà tặng cho bé','0', '5'), (NULL, 'Quà tặng cho mẹ','0', '5'), (NULL, 'Quà tặng cho bố','0', '5'), (NULL, 'Khuyến mãi khai trương','0', '5');
+
+INSERT INTO `chatlieu` (`MaCL`, `TenCL`) VALUES (NULL, 'Bạc 925');
+
+INSERT INTO `taikhoan`(`Email`, `MatKhau`, `LoaiTK`) VALUES ('user@gmail.com','$2y$10$gIM.zQsYUkFq0L0YihBeMeOgDNsnF.ocySzby2ls9maU0Q/Dr1iau','1')
+
+
+INSERT INTO `khuyenmai` (`MaKM`, `PhanTramKM`, `NgayBatDau`, `NgayHetHan`) VALUES (NULL, '23', '2023-05-24', '2023-09-13'), (NULL, '12', '2023-05-24', '2023-10-19'), (NULL, '5', '2023-05-24', '2024-02-15'), (NULL, '3', '2023-05-24', '2023-11-16');
+
+INSERT INTO `chitietkhuyenmai` (`GhiChu`, `MaKM`, `MaApDung`) VALUES ('', '1', '4'), ('', '1', '3'), ('', '1', '1'), ('', '2', '3'), ('', '3', '2'), ('', '3', '4'), ('', '4', '2');
+
+
+
+
+
+INSERT INTO `sanpham` (`MaSP`, `MaTraCuu`, `TenSP`, `DonGia`, `MoTa`, `ChiTiet`, `NgayLenKe`, `Video`, `MaCL`, `MaLoai`) VALUES (NULL, 'ND0269', 'aaa', '320000', 'aaa', 'bbb', '2023-04-27', 'https://www.youtube.com/watch?v=KG4rvHXrEvQ', '1', '9'), (NULL, 'NNM0002', 'Nhẫn nữ Moissanite hoa văn đẹp đính đá 6.0mm NNM0002', '450000', 'ccc', 'ddd', '2023-04-27', 'https://www.youtube.com/watch?v=KG4rvHXrEvQ', '1', '12');
+
+INSERT INTO `hinhanh` (`MaHA`, `LoaiAnh`, `TenAnh`, `MaSP`) VALUES (NULL, '1', 'nn0259-1.jpg', '2'), (NULL, '0', 'nn0259-2.jpg', '2'), (NULL, '0', 'nn0259-3.jpg', '2'), (NULL, '0', 'nn0259-4.jpg', '2'), (NULL, '1', 'nd0269-1.jpg', '1'), (NULL, '0', 'nd0269-2.jpg', '1'), (NULL, '0', 'nd0269-3.jpg', '1'), (NULL, '0', 'nd0269-4.jpg', '1'), (NULL, '0', 'nd0269-5.jpg', '1');
+
+<div id="content-wrapper">
+		
+
+		<div class="column">
+			<img id=featured src="images/shoe1.jpg">
+
+			<div id="slide-wrapper" >
+				<img id="slideLeft" class="arrow" src="images/arrow-left.png">
+
+				<div id="slider">
+					<img class="thumbnail active" src="images/shoe1.jpg">
+					<img class="thumbnail" src="images/shoe2.jpg">
+					<img class="thumbnail" src="images/shoe3.jpg">
+
+					<img class="thumbnail" src="images/preset1.png">
+					<img class="thumbnail" src="images/preset2.jpg">
+					<img class="thumbnail" src="images/preset3.jpg">
+					<img class="thumbnail" src="images/preset4.jpg">
+				</div>
+
+				<img id="slideRight" class="arrow" src="images/arrow-right.png">
+			</div>
+		</div>
+
+		<div class="column">
+			<h1>Awesome Shoes</h1>
+			<hr>
+			<h3>$89.99</h3>
+
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+			<input value=1 type="number">
+			<a class="btn btn-dark" href="#">Add to Cart</a>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>

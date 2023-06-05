@@ -1,0 +1,26 @@
+git init
+git add .
+git commit -m "mesage"
+git remote add origin https://github.com/DinhNguyen22/DOAN3.git
+git push -u origin master
+
+
+=======================
+git pull
+=======================
+gh repo clone DinhNguyen22/quanlidethi
+
+======update code======
+git add .
+git commit -am 'test update code'
+git push origin master
+
+======Clone code=======
+composer install
+copy file .env.example ra 1 file mới và đổi tên thành .env
+php artisan key:generate
+
+
+
+Thiên Đào ?
+Thiên
